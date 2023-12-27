@@ -1,9 +1,8 @@
 use dotenv::dotenv;
-use std::env::args;
+
 
 mod weather;
 mod models;
-mod user;
 mod tui;
 
 #[tokio::main]

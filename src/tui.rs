@@ -1,11 +1,11 @@
-use std::collections::HashMap;
+
 use std::io;
 use termion::raw::IntoRawMode;
 use tui::backend::TermionBackend;
 use tui::layout::{Constraint, Direction, Layout};
 use tui::widgets::{Block, Borders, Cell, Row, Table};
-use termion::color::Color;
-use tui::style::Color as OtherColor;
+
+
 use tui::style::Style;
 use tui::Terminal;
 

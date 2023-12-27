@@ -1,6 +1,6 @@
-use reqwest::Error;
+
 use std::env;
-use std::collections::HashMap;
+
 //import models.rs
 pub use crate::models::Weather;
 
