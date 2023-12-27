@@ -14,7 +14,7 @@ async fn main() {
         std::process::exit(1);
     }
 
-    let city = &args[1];
+    let city = args[1..].join(" ");
     match weather::Weather::fetch_weather(&city).await {
         Ok(weather) => {
             let weather_data = weather.get_weather();
