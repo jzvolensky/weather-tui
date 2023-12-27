@@ -24,10 +24,14 @@ cargo build
 ## Usage
 
 ```bash
-cargo run
+cargo run <CITY>
 ```
 
-Enter the city name and press enter to get the weather data.
+For example:
+
+```bash
+cargo run new york
+```
 
 ## Future plans
 
