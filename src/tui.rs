@@ -17,17 +17,19 @@ pub fn draw_weather_terminal(weather_data: Vec<(String, String)>) -> Result<(), 
     terminal.clear()?;
 
     terminal.draw(|f| {
+        let size = f.size();
+
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .margin(1)
             .constraints(
                 [
-                    Constraint::Percentage(80),
-                    Constraint::Percentage(20),
+                    Constraint::Percentage(70),
+                    Constraint::Percentage(30),
                 ]
                 .as_ref(),
             )
-            .split(f.size());
+            .split(size);
 
         let rows = weather_data
             .into_iter()
@@ -41,10 +43,10 @@ pub fn draw_weather_terminal(weather_data: Vec<(String, String)>) -> Result<(), 
 
         let table = Table::new(rows)
             .block(Block::default().borders(Borders::ALL).title("Weather Data").style(Style::default().bg(tui::style::Color::Black)))
-            .widths(&[Constraint::Length(15), Constraint::Length(15)]);
+            .widths(&[Constraint::Percentage(50), Constraint::Percentage(50)]);
 
         f.render_widget(table, chunks[0]);
     })?;
 
     Ok(())
-} 
+}
