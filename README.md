@@ -7,6 +7,8 @@ In development
 
 This is a simple weather app written in Rust. It uses the [OpenWeatherMap](https://openweathermap.org/) API to get the weather data.
 
+![Screenshot](example.jpeg)
+
 ## Setup
 
 1. Clone the repo

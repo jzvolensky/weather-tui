@@ -1,4 +1,3 @@
-
 use std::io;
 use termion::raw::IntoRawMode;
 use tui::backend::TermionBackend;
@@ -47,6 +46,9 @@ pub fn draw_weather_terminal(weather_data: Vec<(String, String)>) -> Result<(), 
 
         f.render_widget(table, chunks[0]);
     })?;
+
+    //TODO: Figure out a way to fix the weird terminal reset output
+    println!("\n");
 
     Ok(())
 }
